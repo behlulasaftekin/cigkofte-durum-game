@@ -10,6 +10,7 @@ public class MusteriProfiliSO : ScriptableObject
     [Header("Davranış Ayarları")]
     public float beklemeSuresi = 30f;
     public float bahsisCarpani = 1f;
+    public float bahsisBirakmaIhtimali = 0.5f;
 
     [Header("Sipariş Zorluğu")]
     public int minMalzeme = 1;

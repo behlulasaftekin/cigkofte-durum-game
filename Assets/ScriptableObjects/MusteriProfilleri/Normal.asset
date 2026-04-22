@@ -16,6 +16,7 @@ MonoBehaviour:
   karakterGorseli: {fileID: 0}
   beklemeSuresi: 40
   bahsisCarpani: 1
+  bahsisBirakmaIhtimali: 0.4
   minMalzeme: 1
   maxMalzeme: 4
   dubleIstemeIhtimali: 0.3

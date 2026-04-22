@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Profiling;
 
 public class MusteriKuyrukYoneticisi : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class MusteriKuyrukYoneticisi : MonoBehaviour
         }
         Sistem = this;
 
-    }
+    }   
 
     private void Update()
     {
@@ -41,6 +42,28 @@ public class MusteriKuyrukYoneticisi : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        HazirlikYoneticisi.OnSiparisTeslimEdildi += OndenSiparisTeslimEt;
+    }
+
+    private void OnDisable()
+    {
+        HazirlikYoneticisi.OnSiparisTeslimEdildi -= OndenSiparisTeslimEt;
+    }
+
+    private void OndenSiparisTeslimEt(SiparisVerisi mutfaktanGelenDurum)
+    {
+        if (kuyruk.Count > 0)
+        {
+            kuyruk[0].SiparisTeslimAl(mutfaktanGelenDurum);
+        }
+
+        else
+            Debug.LogWarning("Dükkanda müşteri yok mutfaktan dürüm çıktı, Çöpe gitti.");
+    }
+
+    
     private void MusteriCagir()
     {
         if (profilHavuzu.Count == 0) return;

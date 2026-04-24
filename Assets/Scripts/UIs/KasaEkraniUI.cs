@@ -9,7 +9,7 @@ public class KasaEkraniUI : MonoBehaviour
     public string onEk = "Kasa: ";
     public string birim = " TL";
 
-    void update()
+    void Update()
     {
         if (KasaYoneticisi.Sistem != null && kasaYazisi != null)
         {

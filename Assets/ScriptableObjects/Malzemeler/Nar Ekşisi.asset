@@ -16,6 +16,7 @@ MonoBehaviour:
   ekrandaGozukenAd: "Nar Ek\u015Fisi"
   ikon: {fileID: 0}
   fiyat: 0
+  maliyet: 0.5
   tabaktakiGorseli: {fileID: 0}
   renkTonu: {r: 1, g: 1, b: 1, a: 1}
   eklemeSesi: {fileID: 0}

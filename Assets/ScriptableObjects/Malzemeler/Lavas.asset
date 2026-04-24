@@ -16,6 +16,7 @@ MonoBehaviour:
   ekrandaGozukenAd: "Lava\u015F D\xFCr\xFCm"
   ikon: {fileID: 0}
   fiyat: 20
+  maliyet: 5
   tabaktakiGorseli: {fileID: 0}
   renkTonu: {r: 1, g: 1, b: 1, a: 1}
   eklemeSesi: {fileID: 0}

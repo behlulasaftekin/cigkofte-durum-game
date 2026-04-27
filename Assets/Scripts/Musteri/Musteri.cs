@@ -40,6 +40,14 @@ public class Musteri : MonoBehaviour
                 {
                     MusteriKuyrukYoneticisi.Sistem.KuyruguIlerlet();
                 }
+                if (OyunYoneticisi.Sistem != null)
+                {
+                    OyunYoneticisi.Sistem.MusteriGitti();
+                }
+                if (AdisyonUI.Sistem != null)
+                {
+                    AdisyonUI.Sistem.FisiTemizle();
+                }
 
                 Destroy(gameObject);
             }
@@ -51,6 +59,10 @@ public class Musteri : MonoBehaviour
         siparisOnaylandiMi = true;
         Debug.Log($"Sıra {profil.profilAdi}'ne geldi. Siparişi: {siparisim.ToString()}");
 
+        if(AdisyonUI.Sistem != null)
+        {
+            AdisyonUI.Sistem.FiseYaz(profil.profilAdi, siparisim.ToString());
+        }
     }
 
     public void SiparisReddedildi()
@@ -60,6 +72,15 @@ public class Musteri : MonoBehaviour
         if(MusteriKuyrukYoneticisi.Sistem != null)
         {
             MusteriKuyrukYoneticisi.Sistem.KuyruguIlerlet();
+        }
+
+        if (OyunYoneticisi.Sistem != null)
+        {
+            OyunYoneticisi.Sistem.MusteriGitti();
+        }
+        if (AdisyonUI.Sistem != null)
+        {
+            AdisyonUI.Sistem.FisiTemizle();
         }
         Destroy (gameObject);
     }
@@ -104,6 +125,33 @@ public class Musteri : MonoBehaviour
             MusteriKuyrukYoneticisi.Sistem.KuyruguIlerlet();
         }
 
+        if (AdisyonUI.Sistem != null)
+        {
+            AdisyonUI.Sistem.FisiTemizle();
+        }
+        if (OyunYoneticisi.Sistem != null)
+        {
+            OyunYoneticisi.Sistem.MusteriGitti();
+        }
+
         Destroy(gameObject);
+    }
+
+    public float SabirOraniVer()
+    {
+        
+        if (profil == null || profil.beklemeSuresi == 0) return 0f;
+
+        return Mathf.Clamp01(kalanSabir / profil.beklemeSuresi);
+    }
+
+    public int EkrandaGosterilecekSabirDegeri()
+    {
+        float oran = SabirOraniVer(); 
+
+        
+        float hesaplananDeger = Mathf.Lerp(20f, 100f, oran);
+
+        return Mathf.RoundToInt(hesaplananDeger); 
     }
 }

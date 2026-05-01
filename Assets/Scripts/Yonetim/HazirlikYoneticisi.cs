@@ -1,9 +1,11 @@
+using TMPro;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HazirlikYoneticisi : MonoBehaviour
 {
+    public TextMeshProUGUI adisyonText;
     public static HazirlikYoneticisi Sistem { get; private set; }
     //[Header("Yayın Yapılacak Olaylar (Events)")]
     public static event Action<MalzemeSO> OnMalzemeEklendi;
@@ -59,6 +61,13 @@ public class HazirlikYoneticisi : MonoBehaviour
         OnSiparisTeslimEdildi?.Invoke(hazirlananDurum);
         Debug.Log("Dürüm sarıldı ve teslim edildi: "+ hazirlananDurum.ToString());
         TezgahiSifirla();
+    }
+    public void AdisyonuYazdir(string siparisIcerigi)
+    {
+        if (adisyonText != null)
+        {
+            adisyonText.text = "Sipariş: " + siparisIcerigi;
+        }
     }
 
 }

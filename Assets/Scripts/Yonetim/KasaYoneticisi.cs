@@ -1,4 +1,5 @@
     using UnityEngine;
+    using TMPro;
 
     public class KasaYoneticisi : MonoBehaviour
     {
@@ -6,6 +7,7 @@
 
         [Header("Ekonomi Durumu")]
         public float kasaBakiyesi = 100f;
+        public TextMeshProUGUI kasaText;
     
         private void Awake()
         {
@@ -35,7 +37,12 @@
             kasaBakiyesi += kazanilanPara;
             Debug.Log($"[+] Kasaya {kazanilanPara} TL girdi. Güncel Kasa: {kasaBakiyesi}");
         }
+        private void ArayuzuGuncelle()
+        {
+            if (kasaText != null)
+            {
+                kasaText.text = kasaBakiyesi.ToString("F2") + " TL";
+            }
+        }
 
-
-
-    }
+}

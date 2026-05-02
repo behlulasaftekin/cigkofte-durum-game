@@ -72,7 +72,7 @@ public class MusteriKuyrukYoneticisi : MonoBehaviour
         int siraIndex = kuyruk.Count;
         Transform hedefNokta = siraNoktalari[siraIndex];
 
-        GameObject yeniObj = Instantiate(musteriPrefab, hedefNokta.position, Quaternion.identity);
+        GameObject yeniObj = Instantiate(musteriPrefab, hedefNokta);
         Musteri yeniMusteri = yeniObj.GetComponent<Musteri>();
 
         int rasgteleProfilIndex = Random.Range(0, profilHavuzu.Count);

@@ -32,6 +32,7 @@ public class HazirlikYoneticisi : MonoBehaviour
         tezgahtakiMalzeler.Add(malzeme);
         OnMalzemeEklendi?.Invoke(malzeme);
         Debug.Log($"Tezgaha Eklendi: {malzeme.ekrandaGozukenAd}");
+        GuncelDurumuYazdir();
 
     }
 
@@ -39,6 +40,7 @@ public class HazirlikYoneticisi : MonoBehaviour
     {
         dubleMi = secildiMi;
         Debug.Log(dubleMi ? "Dürüm artık DUBLE!" : "Dürüm NORMAL porsiyona döndü.");
+        GuncelDurumuYazdir();
 
     }
     private void TezgahiSifirla()
@@ -46,6 +48,7 @@ public class HazirlikYoneticisi : MonoBehaviour
         tezgahtakiMalzeler.Clear();
         dubleMi = false;
         OnTezgahTemizlendi?.Invoke();
+        adisyonText.text = "Tezgah Boş...";
     }
 
     public void CopeAt()
@@ -68,6 +71,21 @@ public class HazirlikYoneticisi : MonoBehaviour
         {
             adisyonText.text = "Sipariş: " + siparisIcerigi;
         }
+    }
+    private void GuncelDurumuYazdir()
+    {
+        if (adisyonText == null) return; 
+
+        string icerik = dubleMi ? "[DUBLE] " : "[NORMAL] "; 
+        List<string> isimler = new List<string>();
+
+        foreach (var m in tezgahtakiMalzeler)
+        {
+            isimler.Add(m.ekrandaGozukenAd); 
+        }
+
+        string malzemeListesi = string.Join(", ", isimler);
+        adisyonText.text = "Hazırlanan:\n" + icerik + malzemeListesi; 
     }
 
 }

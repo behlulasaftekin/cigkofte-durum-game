@@ -549,6 +549,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420863054}
   m_CullTransparentMesh: 1
+--- !u!1 &427842823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 427842825}
+  - component: {fileID: 427842824}
+  m_Layer: 0
+  m_Name: SiparisYoneticisi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &427842824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427842823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bcfc4686b176a428f3ac3e0ba5e121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Siparis
+  mevcutMalzemeler:
+  - {fileID: 11400000, guid: 3dc1bf7aebfcf4049804a42a0972daa2, type: 2}
+  - {fileID: 11400000, guid: e4c477cc1330a1c4baa20e97fb6fa5d2, type: 2}
+  - {fileID: 11400000, guid: 0b6be9053d99b8b45be8ecea439aa4e8, type: 2}
+--- !u!4 &427842825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427842823}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 146, y: 140, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1371,60 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &928286502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 928286504}
+  - component: {fileID: 928286503}
+  m_Layer: 0
+  m_Name: MusteriKuyrukYoneticisi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &928286503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928286502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 882b5b27e08456c4a8a1c7026bdd7b7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusteriKuyrukYoneticisi
+  musteriPrefab: {fileID: 469682365916903296, guid: 7e1426a040255cb499d7848e4a17c1c0, type: 3}
+  siraNoktalari:
+  - {fileID: 40263635}
+  - {fileID: 1712562638}
+  - {fileID: 871146087}
+  musteriGelmeSuresi: 5
+  profilHavuzu:
+  - {fileID: 11400000, guid: d6db30f194592a44abd55e735d17d29c, type: 2}
+  - {fileID: 11400000, guid: 70925382a731fa6408925a01b881673b, type: 2}
+  - {fileID: 11400000, guid: 122f0f10c32f2b442bfa08d79669e421, type: 2}
+--- !u!4 &928286504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928286502}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 148.11748, y: 71.58863, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &932125353
 GameObject:
   m_ObjectHideFlags: 0
@@ -3389,4 +3491,6 @@ SceneRoots:
   - {fileID: 932125354}
   - {fileID: 920276580}
   - {fileID: 1862500496}
+  - {fileID: 427842825}
+  - {fileID: 928286504}
   - {fileID: 1713788037}

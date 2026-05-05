@@ -1,14 +1,23 @@
 
 using UnityEngine;
+using UnityEngine.UI;// sliderı kontrol etmek için      
 
 public class Musteri : MonoBehaviour
 {
+    public Slider sabirSlider;
+    public Image sabirFillImage; // Barın içindeki renkli kısmın resmi
+    public float maxSabir = 100f; // Müşterinin toplam sabır süresi
+    public float kalanSabir;
     [Header("Müşteri Bilgileri")]
     public SiparisVerisi siparisim;
     public MusteriProfiliSO profil;
+    void Start()
+    {
+        kalanSabir = maxSabir; 
+    }
 
     private bool siparisOnaylandiMi = false;
-    private float kalanSabir;
+
 
     public void Kurulum(MusteriProfiliSO atananProfil)
     {
@@ -51,6 +60,16 @@ public class Musteri : MonoBehaviour
 
                 Destroy(gameObject);
             }
+        }
+        if (sabirSlider != null)
+        {
+            // Slider'ın değerini kalan sabır oranına eşitlemek için 
+            sabirSlider.value = kalanSabir / maxSabir;
+        }
+        if (sabirFillImage != null)
+        {
+            //kırmızıdan yeşile geçiş
+            sabirFillImage.color = Color.Lerp(Color.red, Color.green, kalanSabir / maxSabir);
         }
     }
 

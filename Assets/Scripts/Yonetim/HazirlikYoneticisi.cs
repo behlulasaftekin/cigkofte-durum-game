@@ -5,6 +5,14 @@ using UnityEngine;
 
 public class HazirlikYoneticisi : MonoBehaviour
 {
+    [Header("Frontend - Malzeme Objeleri")]
+    public GameObject LavasGorsel;
+    public GameObject CigkofteGorsel;
+    public GameObject MarulGorsel;
+    public GameObject AcısosGorsel;
+    public GameObject NareksisiGorsel;
+    public GameObject DoritosGorsel;
+
     public TextMeshProUGUI adisyonText;
     public static HazirlikYoneticisi Sistem { get; private set; }
     //[Header("Yayın Yapılacak Olaylar (Events)")]
@@ -33,6 +41,12 @@ public class HazirlikYoneticisi : MonoBehaviour
         OnMalzemeEklendi?.Invoke(malzeme);
         Debug.Log($"Tezgaha Eklendi: {malzeme.ekrandaGozukenAd}");
         GuncelDurumuYazdir();
+        if (malzeme.ekrandaGozukenAd == "Lavas") LavasGorsel.SetActive(true);
+        else if (malzeme.ekrandaGozukenAd == "Çiğköfte") CigkofteGorsel.SetActive(true);
+        else if (malzeme.ekrandaGozukenAd == "Marul") MarulGorsel.SetActive(true);
+        else if (malzeme.ekrandaGozukenAd == "Acı Sos") AcısosGorsel.SetActive(true);
+        else if (malzeme.ekrandaGozukenAd == "Nar Ekşisi") NareksisiGorsel.SetActive(true);
+        else if (malzeme.ekrandaGozukenAd == "Doritos") DoritosGorsel.SetActive(true);
 
     }
 
@@ -49,6 +63,13 @@ public class HazirlikYoneticisi : MonoBehaviour
         dubleMi = false;
         OnTezgahTemizlendi?.Invoke();
         adisyonText.text = "Tezgah Boş...";
+        //fronted kısmı
+        LavasGorsel.SetActive(false);
+        CigkofteGorsel.SetActive(false);
+        MarulGorsel.SetActive(false);
+        AcısosGorsel.SetActive(false);
+        NareksisiGorsel.SetActive(false);
+        DoritosGorsel.SetActive(false);
     }
 
     public void CopeAt()

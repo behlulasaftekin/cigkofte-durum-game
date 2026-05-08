@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lavas
   m_EditorClassIdentifier: Assembly-CSharp::MalzemeSO
   sistemAdi: lavas
-  ekrandaGozukenAd: "Lava\u015F D\xFCr\xFCm"
+  ekrandaGozukenAd: "Lava\u015F"
   ikon: {fileID: 0}
   fiyat: 20
   maliyet: 5

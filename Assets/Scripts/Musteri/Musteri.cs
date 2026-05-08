@@ -6,15 +6,12 @@ public class Musteri : MonoBehaviour
 {
     public Slider sabirSlider;
     public Image sabirFillImage; // Barın içindeki renkli kısmın resmi
-    public float maxSabir = 100f; // Müşterinin toplam sabır süresi
+    public float maxSabir; // Müşterinin toplam sabır süresi
     public float kalanSabir;
     [Header("Müşteri Bilgileri")]
     public SiparisVerisi siparisim;
     public MusteriProfiliSO profil;
-    void Start()
-    {
-        kalanSabir = maxSabir; 
-    }
+                
 
     private bool siparisOnaylandiMi = false;
 
@@ -22,6 +19,7 @@ public class Musteri : MonoBehaviour
     public void Kurulum(MusteriProfiliSO atananProfil)
     {
         profil = atananProfil;
+        maxSabir = profil.beklemeSuresi;
         kalanSabir = profil.beklemeSuresi;
     }
 
@@ -45,17 +43,17 @@ public class Musteri : MonoBehaviour
             {
                 Debug.Log($"{profil.profilAdi} çok bekledi, sinirlenip gitti.");
 
-                if(MusteriKuyrukYoneticisi.Sistem != null)
+                if (AdisyonUI.Sistem != null)
                 {
-                    MusteriKuyrukYoneticisi.Sistem.KuyruguIlerlet();
+                    AdisyonUI.Sistem.FisiTemizle();
                 }
                 if (OyunYoneticisi.Sistem != null)
                 {
                     OyunYoneticisi.Sistem.MusteriGitti();
                 }
-                if (AdisyonUI.Sistem != null)
+                if (MusteriKuyrukYoneticisi.Sistem != null)
                 {
-                    AdisyonUI.Sistem.FisiTemizle();
+                    MusteriKuyrukYoneticisi.Sistem.KuyruguIlerlet();
                 }
 
                 Destroy(gameObject);
@@ -87,20 +85,21 @@ public class Musteri : MonoBehaviour
     public void SiparisReddedildi()
     {
         Debug.Log($"{profil.profilAdi} adlı elemanı kovduk, dükkandan ayrılıyor.");
-
-        if(MusteriKuyrukYoneticisi.Sistem != null)
-        {
-            MusteriKuyrukYoneticisi.Sistem.KuyruguIlerlet();
-        }
-
-        if (OyunYoneticisi.Sistem != null)
-        {
-            OyunYoneticisi.Sistem.MusteriGitti();
-        }
         if (AdisyonUI.Sistem != null)
         {
             AdisyonUI.Sistem.FisiTemizle();
         }
+        if (OyunYoneticisi.Sistem != null)
+        {
+            OyunYoneticisi.Sistem.MusteriGitti();
+        }
+        if (MusteriKuyrukYoneticisi.Sistem != null)
+        {
+            MusteriKuyrukYoneticisi.Sistem.KuyruguIlerlet();
+        }
+
+        
+        
         Destroy (gameObject);
     }
 
@@ -138,12 +137,6 @@ public class Musteri : MonoBehaviour
                 KasaYoneticisi.Sistem.SiparisGeliriEkle(odenecekTutar);
             }
         }
-
-        if(MusteriKuyrukYoneticisi.Sistem != null)
-        {
-            MusteriKuyrukYoneticisi.Sistem.KuyruguIlerlet();
-        }
-
         if (AdisyonUI.Sistem != null)
         {
             AdisyonUI.Sistem.FisiTemizle();
@@ -152,6 +145,14 @@ public class Musteri : MonoBehaviour
         {
             OyunYoneticisi.Sistem.MusteriGitti();
         }
+
+        if (MusteriKuyrukYoneticisi.Sistem != null)
+        {
+            MusteriKuyrukYoneticisi.Sistem.KuyruguIlerlet();
+        }
+
+        
+        
 
         Destroy(gameObject);
     }

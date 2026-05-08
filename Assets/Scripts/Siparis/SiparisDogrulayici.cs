@@ -18,6 +18,7 @@ public static class SiparisDogrulayici
         public List<MalzemeSO> eksikMalzemeler;
         public List<MalzemeSO> fazlaMalzemeler;
         public bool dubleDogruMu;
+        public bool ciftLavasDogruMu;
         public float memnuniyetSkoru;
     }
 
@@ -32,6 +33,7 @@ public static class SiparisDogrulayici
         };
 
         rapor.dubleDogruMu = (istenen.dubleMi == hazirlanan.dubleMi);
+        rapor.ciftLavasDogruMu = (istenen.ciftLavasMi == hazirlanan.ciftLavasMi);
 
         List<MalzemeSO> istenenListe = new List<MalzemeSO>(istenen.istenenMalzemeler);
         List<MalzemeSO> hazirlananListe = new List<MalzemeSO>(hazirlanan.istenenMalzemeler);
@@ -49,12 +51,12 @@ public static class SiparisDogrulayici
         bool eksikYok = rapor.eksikMalzemeler.Count == 0;
         bool fazlaYok = rapor.fazlaMalzemeler.Count == 0;
 
-        if (eksikYok && fazlaYok && rapor.dubleDogruMu)
+        if (eksikYok && fazlaYok && rapor.dubleDogruMu && rapor.ciftLavasDogruMu)
             rapor.sonuc = DogrulamaSonucu.Kusursuz;
-        else if ( (!eksikYok || !fazlaYok) && !rapor.dubleDogruMu) 
+        else if ((!eksikYok || !fazlaYok) && (!rapor.dubleDogruMu || !rapor.ciftLavasDogruMu))
             rapor.sonuc = DogrulamaSonucu.TamamenYanlis;
-        else if (!rapor.dubleDogruMu)
-            rapor.sonuc = DogrulamaSonucu.YanlisPorsiyon;
+        else if (!rapor.dubleDogruMu || !rapor.ciftLavasDogruMu)
+            rapor.sonuc = DogrulamaSonucu.YanlisPorsiyon; 
         else if (!eksikYok)
             rapor.sonuc = DogrulamaSonucu.EksikMalzeme;
         else
@@ -64,6 +66,7 @@ public static class SiparisDogrulayici
         skor -= rapor.eksikMalzemeler.Count * 0.15f;
         skor -= rapor.fazlaMalzemeler.Count * 0.05f;
         if (!rapor.dubleDogruMu) skor -= 0.3f;
+        if (!rapor.ciftLavasDogruMu) skor -= 0.2f;
         rapor.memnuniyetSkoru = Mathf.Clamp01(skor);
         return rapor;
     }

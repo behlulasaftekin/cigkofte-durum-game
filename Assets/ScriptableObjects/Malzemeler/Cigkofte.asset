@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7a00f823961c914dbf43d1c353b89cc, type: 3}
-  m_Name: Duble
+  m_Name: Cigkofte
   m_EditorClassIdentifier: Assembly-CSharp::MalzemeSO
-  sistemAdi: 'duble '
-  ekrandaGozukenAd: Duble porsiyon
+  sistemAdi: cigkofte
+  ekrandaGozukenAd: "\xC7i\u011Fk\xF6fte"
   ikon: {fileID: 0}
-  fiyat: 30
-  maliyet: 10
+  fiyat: 0
+  maliyet: 0
   tabaktakiGorseli: {fileID: 0}
   renkTonu: {r: 1, g: 1, b: 1, a: 1}
   eklemeSesi: {fileID: 0}

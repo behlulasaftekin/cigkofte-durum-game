@@ -21,7 +21,7 @@ public class HazirlikYoneticisi : MonoBehaviour
     public static event Action<SiparisVerisi> OnSiparisTeslimEdildi;
 
     [Header("Tezgahın Anlık Durumu")]
-    private bool dubleMi = false;
+    
     private List<MalzemeSO> tezgahtakiMalzeler = new List<MalzemeSO>();
 
     private void Awake()
@@ -50,17 +50,10 @@ public class HazirlikYoneticisi : MonoBehaviour
 
     }
 
-    public void DubleSecimi(bool secildiMi)
-    {
-        dubleMi = secildiMi;
-        Debug.Log(dubleMi ? "Dürüm artık DUBLE!" : "Dürüm NORMAL porsiyona döndü.");
-        GuncelDurumuYazdir();
-
-    }
+   
     private void TezgahiSifirla()
     {
         tezgahtakiMalzeler.Clear();
-        dubleMi = false;
         OnTezgahTemizlendi?.Invoke();
         adisyonText.text = "Tezgah Boş...";
         //fronted kısmı
@@ -81,10 +74,38 @@ public class HazirlikYoneticisi : MonoBehaviour
 
     public void SiparisiTeslimEt()
     {
-        SiparisVerisi hazirlananDurum = new SiparisVerisi(dubleMi, tezgahtakiMalzeler);
-        OnSiparisTeslimEdildi?.Invoke(hazirlananDurum);
-        Debug.Log("Dürüm sarıldı ve teslim edildi: "+ hazirlananDurum.ToString());
+        int cigkofteSayisi = 0;
+        int lavasSayisi = 0;
+        List<MalzemeSO> dogrulanacakMalzemeler = new List<MalzemeSO>();
+
+        foreach (var m in tezgahtakiMalzeler)
+        {
+            if (m.ekrandaGozukenAd == "Çiğköfte")
+            {
+                cigkofteSayisi++;
+                
+                if (cigkofteSayisi == 1) dogrulanacakMalzemeler.Add(m);
+            }
+            else if (m.ekrandaGozukenAd == "Lavas")
+            {
+                lavasSayisi++;
+                
+                if (lavasSayisi == 1) dogrulanacakMalzemeler.Add(m);
+            }
+            else
+            {
+                dogrulanacakMalzemeler.Add(m);
+            }
+        }
+
+        bool otomatikDuble = cigkofteSayisi >= 2;
+        bool otomatikCiftLavas = lavasSayisi >= 2;
+    
+        SiparisVerisi hazirlananDurum = new SiparisVerisi(otomatikDuble, otomatikCiftLavas, dogrulanacakMalzemeler);
         TezgahiSifirla();
+        OnSiparisTeslimEdildi?.Invoke(hazirlananDurum);
+        Debug.Log("Dürüm sarıldı ve teslim edildi: " + hazirlananDurum.ToString());
+
     }
     public void AdisyonuYazdir(string siparisIcerigi)
     {
@@ -95,18 +116,25 @@ public class HazirlikYoneticisi : MonoBehaviour
     }
     private void GuncelDurumuYazdir()
     {
-        if (adisyonText == null) return; 
+        if (adisyonText == null) return;
 
-        string icerik = dubleMi ? "[DUBLE] " : "[NORMAL] "; 
+        int cigkofteSayisi = 0;
+        int lavasSayisi = 0;
         List<string> isimler = new List<string>();
 
         foreach (var m in tezgahtakiMalzeler)
         {
-            isimler.Add(m.ekrandaGozukenAd); 
+            if (m.ekrandaGozukenAd == "Çiğköfte") cigkofteSayisi++;
+            else if (m.ekrandaGozukenAd == "Lavas") lavasSayisi++; 
+
+            isimler.Add(m.ekrandaGozukenAd);
         }
 
+        string porsiyonYazisi = (cigkofteSayisi >= 2) ? "[DUBLE] " : "[NORMAL] ";
+        string lavasYazisi = (lavasSayisi >= 2) ? "[ÇİFT LAVAŞ] " : "[TEK LAVAŞ] ";
         string malzemeListesi = string.Join(", ", isimler);
-        adisyonText.text = "Hazırlanan:\n" + icerik + malzemeListesi; 
+
+        adisyonText.text = "Hazırlanan:\n" + porsiyonYazisi + lavasYazisi + malzemeListesi;
     }
 
 }

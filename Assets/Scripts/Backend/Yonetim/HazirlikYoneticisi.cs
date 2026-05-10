@@ -66,7 +66,7 @@ public class HazirlikYoneticisi : MonoBehaviour
                 
                 if (cigkofteSayisi == 1) dogrulanacakMalzemeler.Add(m);
             }
-            else if (m.ekrandaGozukenAd == "Lavas")
+            else if (m.ekrandaGozukenAd == "Lavaş")
             {
                 lavasSayisi++;
                 
@@ -105,9 +105,9 @@ public class HazirlikYoneticisi : MonoBehaviour
         foreach (var m in tezgahtakiMalzeler)
         {
             if (m.ekrandaGozukenAd == "Çiğköfte") cigkofteSayisi++;
-            else if (m.ekrandaGozukenAd == "Lavas") lavasSayisi++; 
+            else if (m.ekrandaGozukenAd == "Lavaş") lavasSayisi++; 
 
-            isimler.Add(m.ekrandaGozukenAd);
+            else isimler.Add(m.ekrandaGozukenAd);
         }
 
         string porsiyonYazisi = (cigkofteSayisi >= 2) ? "[DUBLE] " : "[NORMAL] ";

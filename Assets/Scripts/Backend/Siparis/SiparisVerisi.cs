@@ -35,12 +35,18 @@ public class SiparisVerisi
         List<string> isimler = new List<string>();
         foreach(var m in istenenMalzemeler)
         {
-            isimler.Add(m.ekrandaGozukenAd);
+            if (m.ekrandaGozukenAd != "Lavaş" && m.ekrandaGozukenAd != "Çiğköfte")
+            {
+                isimler.Add(m.ekrandaGozukenAd);
+            }
         }
 
         string malzemeIsimleri = string.Join(", ", isimler);
         string porsiyon = dubleMi ? "DUBLE" : "NORMAL";
         string lavasDurumu = ciftLavasMi ? "ÇİFT LAVAŞ" : "TEK LAVAŞ";
-        return $"[{porsiyon}] [{lavasDurumu}] {malzemeIsimleri} - Toplam: {toplamFiyat} TL";
+        if (isimler.Count > 0)
+            return $"[{porsiyon}] [{lavasDurumu}] {malzemeIsimleri} - Toplam: {toplamFiyat} TL";
+        else
+            return $"[{porsiyon}] [{lavasDurumu}] - Toplam: {toplamFiyat} TL";
     }
 }

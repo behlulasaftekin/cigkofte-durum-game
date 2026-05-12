@@ -49,6 +49,8 @@ public class Musteri : MonoBehaviour
                 }
                 if (OyunYoneticisi.Sistem != null)
                 {
+                    OyunYoneticisi.Sistem.kacanMusteri++;
+
                     OyunYoneticisi.Sistem.MusteriGitti();
                 }
                 if (MusteriKuyrukYoneticisi.Sistem != null)
@@ -91,6 +93,7 @@ public class Musteri : MonoBehaviour
         }
         if (OyunYoneticisi.Sistem != null)
         {
+            OyunYoneticisi.Sistem.kacanMusteri++;
             OyunYoneticisi.Sistem.MusteriGitti();
         }
         if (MusteriKuyrukYoneticisi.Sistem != null)

@@ -2975,6 +2975,10 @@ MonoBehaviour:
   mevcutGun: 1
   maxGun: 3
   gunlukMusteriHedefi: 5
+  gunlukGelir: 0
+  gunlukGider: 0
+  basariliSiparis: 0
+  kacanMusteri: 0
   iflasSiniri: -50
 --- !u!114 &1713788033
 MonoBehaviour:

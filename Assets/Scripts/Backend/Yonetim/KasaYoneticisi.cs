@@ -28,6 +28,10 @@
         private void MalzemeMaliyetiDus(MalzemeSO eklenenMalzeme)
         {
             kasaBakiyesi -= eklenenMalzeme.maliyet;
+            if (OyunYoneticisi.Sistem != null)
+                OyunYoneticisi.Sistem.gunlukGider += eklenenMalzeme.maliyet;
+
+            ArayuzuGuncelle();
             Debug.Log($"[-] Kasadan {eklenenMalzeme.maliyet} TL çıktı. Kullanılan: {eklenenMalzeme.ekrandaGozukenAd}. Güncel Kasa:{kasaBakiyesi}");
 
         }
@@ -35,6 +39,14 @@
         public void SiparisGeliriEkle(float kazanilanPara)
         {
             kasaBakiyesi += kazanilanPara;
+            if (OyunYoneticisi.Sistem != null)
+            {
+                OyunYoneticisi.Sistem.gunlukGelir += kazanilanPara;
+                OyunYoneticisi.Sistem.basariliSiparis++;
+            }
+
+            ArayuzuGuncelle();
+
             Debug.Log($"[+] Kasaya {kazanilanPara} TL girdi. Güncel Kasa: {kasaBakiyesi}");
         }
         private void ArayuzuGuncelle()

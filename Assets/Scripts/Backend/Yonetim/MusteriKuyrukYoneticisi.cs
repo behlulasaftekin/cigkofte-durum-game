@@ -14,6 +14,9 @@ public class MusteriKuyrukYoneticisi : MonoBehaviour
     [Header("Müşteri Çeşitleri")]
     public List<MusteriProfiliSO> profilHavuzu;
 
+    [Header("Dükkan Durumu")]
+    public bool dukkanAcikMi = true;
+
     private List<Musteri> kuyruk = new List<Musteri>();
     private float zamanSayaci;
 
@@ -30,7 +33,7 @@ public class MusteriKuyrukYoneticisi : MonoBehaviour
 
     private void Update()
     {
-        if (kuyruk.Count < siraNoktalari.Length)
+        if (dukkanAcikMi && kuyruk.Count < siraNoktalari.Length)
         {
             zamanSayaci += Time.deltaTime;
 
@@ -107,5 +110,14 @@ public class MusteriKuyrukYoneticisi : MonoBehaviour
         }
 
 
+    }
+
+    public void DukkaniBosalt()
+    {
+        foreach(var musteri in kuyruk)
+        {
+            if (musteri != null) Destroy(musteri.gameObject);
+        }
+        kuyruk.Clear();
     }
 }

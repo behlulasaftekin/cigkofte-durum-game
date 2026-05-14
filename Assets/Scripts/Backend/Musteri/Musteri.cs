@@ -94,7 +94,7 @@ public class Musteri : MonoBehaviour
         if (OyunYoneticisi.Sistem != null)
         {
             OyunYoneticisi.Sistem.kacanMusteri++;
-            OyunYoneticisi.Sistem.MusteriGitti();
+            OyunYoneticisi.Sistem.MusteriKacti();
         }
         if (MusteriKuyrukYoneticisi.Sistem != null)
         {

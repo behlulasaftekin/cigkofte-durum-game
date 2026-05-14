@@ -1,3 +1,5 @@
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class OyunYoneticisi : MonoBehaviour
@@ -18,16 +20,55 @@ public class OyunYoneticisi : MonoBehaviour
     [Header("İflas Ayarları")]
     public float iflasSiniri = -50f;
 
+    [Header("UI - Gün Sonu Paneli")]
+    public GameObject gunSonuPaneli;
+    public TextMeshProUGUI gunBaslikText;
+    public TextMeshProUGUI kazancText;
+    public TextMeshProUGUI giderText;
+    public TextMeshProUGUI mutluMusteriText;
+    public TextMeshProUGUI kacanMusteriText;
+    public TextMeshProUGUI netKarText;
+
+    [Header("UI - Yeni Gün Animasyonu")]
+    public GameObject yeniGunObje;
+    public TextMeshProUGUI yeniGunText;
+
     private void Awake()
     {
         if (Sistem != null && Sistem != this) { Destroy(gameObject); return; }
         Sistem = this;
     }
 
+    private void Start()
+    {
+        if(gunSonuPaneli != null) gunSonuPaneli.SetActive(false);
+        YeniGunYazisiniGoster();
+    }
+
+    private void YeniGunYazisiniGoster()
+    {
+        if(yeniGunObje != null && yeniGunText != null)
+        {
+            yeniGunObje.SetActive(true);
+            yeniGunText.text = $"{mevcutGun}. GÜN BAŞLIYOR!";
+
+            Invoke("YeniGunYazisiniKapat", 3f);
+
+        }
+    }
+    
+    private void YeniGunYazisiniKapat()
+    {
+        if (yeniGunObje != null) yeniGunObje.SetActive(false);
+    }
+
+   
     private void Update()
     {
         IflasKontrolu();
     }
+
+
 
     private void IflasKontrolu()
     {
@@ -50,32 +91,58 @@ public class OyunYoneticisi : MonoBehaviour
 
     private void GunBitti()
     {
-        string rapor = $"\n--- {mevcutGun}. GÜN SONU RAPORU ---\n" +
-                       $"💰 Toplam Kazanç: {gunlukGelir:F2} TL\n" +
-                       $"💸 Malzeme Gideri: {gunlukGider:F2} TL\n" +
-                       $"✅ Mutlu Müşteri: {basariliSiparis}\n" +
-                       $"❌ Kaçan Müşteri: {kacanMusteri}\n" +
-                       $"📈 Net Kar: {(gunlukGelir - gunlukGider):F2} TL\n" +
-                       $"---------------------------";
+        if (MusteriKuyrukYoneticisi.Sistem != null)
+            MusteriKuyrukYoneticisi.Sistem.dukkanAcikMi = false;
+        MusteriKuyrukYoneticisi.Sistem.DukkaniBosalt();
+        HazirlikYoneticisi.Sistem.CopeAt();
+        if (gunSonuPaneli != null)
+        {
+            gunSonuPaneli.SetActive(true);
+            if (gunBaslikText != null) gunBaslikText.text = $"--- {mevcutGun}. GÜN SONU ---";
+            if (kazancText != null) kazancText.text = $"Toplam Kazanç: {gunlukGelir:F2} TL";
+            if (giderText != null) giderText.text = $"Malzeme Gideri: {gunlukGider:F2} TL";
+            if (mutluMusteriText != null) mutluMusteriText.text = $"Mutlu Müşteri: {basariliSiparis}";
+            if (kacanMusteriText != null) kacanMusteriText.text = $"Kaçan Müşteri: {kacanMusteri}";
 
-        Debug.Log(rapor);
+            float netKar = gunlukGelir - gunlukGider;
+            if(netKar != null)
+            {
+                netKarText.text = $"Net Kar: {netKar:F2} TL";
+                netKarText.color = netKar >= 0 ? Color.green : Color.red;
 
-        if (mevcutGun >= maxGun)
+            }
+        }
+
+        if(mevcutGun  >= maxGun)
         {
             Debug.Log("<color=gold>🏆 TEBRİKLER! TÜM GÜNLERİ BAŞARIYLA ATLATIP ZENGİN BİR ESNAF OLDUN!</color>");
-            Time.timeScale = 0;
         }
-        else
-        {
-            mevcutGun++;
+    }
+
+    public void YeniGuneBasla()
+    {
+        if (mevcutGun >= maxGun) return;
+
+        mevcutGun++;
+        bugunHizmetEdilen = 0;
+        gunlukGelir = 0;
+        gunlukGider = 0;
+        basariliSiparis = 0;
+        kacanMusteri = 0;
+
+        if(gunSonuPaneli != null) gunSonuPaneli.SetActive(false);
+
+        YeniGunYazisiniGoster();
+
+        if (MusteriKuyrukYoneticisi.Sistem != null)
+            MusteriKuyrukYoneticisi.Sistem.dukkanAcikMi = true;
        
-            bugunHizmetEdilen = 0;
-            gunlukGelir = 0;
-            gunlukGider = 0;
-            basariliSiparis = 0;
-            kacanMusteri = 0;
-            Debug.Log($"<color=green>--- {mevcutGun}. GÜN BAŞLIYOR! ---</color>");
-        }
+    }
+
+    public void MusteriKacti()
+    {
+        kacanMusteri++;
+        MusteriGitti();
     }
 }
 

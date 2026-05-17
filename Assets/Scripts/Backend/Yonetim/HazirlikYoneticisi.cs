@@ -30,6 +30,25 @@ public class HazirlikYoneticisi : MonoBehaviour
 
     public void MalzemeEkle(MalzemeSO malzeme)
     {
+        if(malzeme.ekrandaGozukenAd != "Lavaş")
+        {
+            bool tezgahtaLavasVarMi = false;
+
+            foreach(var m in tezgahtakiMalzeler)
+            {
+                if(m.ekrandaGozukenAd == "Lavaş")
+                {
+                    tezgahtaLavasVarMi = true;
+                    break;
+                    
+                }
+            }
+            if (!tezgahtaLavasVarMi)
+            {
+                Debug.LogWarning("Usta havaya malzeme mi sıkıyorsun? Önce Lavaş koy!");
+                return;
+            }
+        }
         tezgahtakiMalzeler.Add(malzeme);
         OnMalzemeEklendi?.Invoke(malzeme);
         Debug.Log($"Tezgaha Eklendi: {malzeme.ekrandaGozukenAd}");

@@ -12,6 +12,9 @@ public class MusteriProfiliSO : ScriptableObject
     public float bahsisCarpani = 1f;
     public float bahsisBirakmaIhtimali = 0.5f;
 
+    [Header("Görsel Ayarları")]
+    public Sprite musteriResmi;
+
     [Header("Sipariş Zorluğu")]
     public int minMalzeme = 1;
     public int maxMalzeme = 5;

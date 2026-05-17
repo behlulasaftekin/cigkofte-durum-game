@@ -11,7 +11,10 @@ public class Musteri : MonoBehaviour
     [Header("Müşteri Bilgileri")]
     public SiparisVerisi siparisim;
     public MusteriProfiliSO profil;
-                
+
+    [Header("Görsel Bağlantıları")]
+    public SpriteRenderer karakterSprite;
+
 
     private bool siparisOnaylandiMi = false;
 
@@ -21,6 +24,11 @@ public class Musteri : MonoBehaviour
         profil = atananProfil;
         maxSabir = profil.beklemeSuresi;
         kalanSabir = profil.beklemeSuresi;
+
+        if (karakterSprite != null && profil.musteriResmi != null)
+        {
+            karakterSprite.sprite = profil.musteriResmi;
+        }
     }
 
     public void KasayaSiraGeldi()

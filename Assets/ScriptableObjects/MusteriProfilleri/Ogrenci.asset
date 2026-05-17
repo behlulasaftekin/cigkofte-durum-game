@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Ogrenci
   m_EditorClassIdentifier: Assembly-CSharp::MusteriProfiliSO
   profilAdi: "\xD6\u011Frenci"
-  karakterGorseli: {fileID: 0}
+  karakterGorseli: {fileID: 3845196829904055341, guid: 64bc86cafa7c7494688f4ba1f4d65d41, type: 3}
   beklemeSuresi: 50
   bahsisCarpani: 0.5
   bahsisBirakmaIhtimali: 0.05
+  musteriResmi: {fileID: 3845196829904055341, guid: 64bc86cafa7c7494688f4ba1f4d65d41, type: 3}
   minMalzeme: 1
   maxMalzeme: 3
   dubleIstemeIhtimali: 0.3

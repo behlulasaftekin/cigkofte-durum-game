@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Normal
   m_EditorClassIdentifier: Assembly-CSharp::MusteriProfiliSO
   profilAdi: "Normal M\xFC\u015Fteri"
-  karakterGorseli: {fileID: 0}
+  karakterGorseli: {fileID: -6746094262261326558, guid: c5fb6fdea0c8dc04d8dd626ea190692b, type: 3}
   beklemeSuresi: 40
   bahsisCarpani: 1
   bahsisBirakmaIhtimali: 0.4
+  musteriResmi: {fileID: -6746094262261326558, guid: c5fb6fdea0c8dc04d8dd626ea190692b, type: 3}
   minMalzeme: 1
   maxMalzeme: 4
   dubleIstemeIhtimali: 0.3

@@ -125,46 +125,34 @@ public class Musteri : MonoBehaviour
             Debug.Log($"{profil.profilAdi}: 'Bu ne rezalet usta, ben bunu yemicem!' (Para ödemedi)");
         }
 
-        else
+        else if (rapor.sonuc == SiparisDogrulayici.DogrulamaSonucu.Kusursuz)
         {
             odenecekTutar = siparisim.toplamFiyat;
-            
-            if(rapor.memnuniyetSkoru >= 0.7f)
+
+            if (Random.value <= profil.bahsisBirakmaIhtimali)
             {
-                if(Random.value <= profil.bahsisBirakmaIhtimali)
-                {
-                    float maxBahsis = siparisim.toplamFiyat * 0.2f;
-                    float eklenecekBahsis = maxBahsis * rapor.memnuniyetSkoru * profil.bahsisCarpani;
-                    odenecekTutar += eklenecekBahsis;
+                float maxBahsis = siparisim.toplamFiyat * 0.2f;
+                float eklenecekBahsis = maxBahsis * rapor.memnuniyetSkoru * profil.bahsisCarpani;
+                odenecekTutar += eklenecekBahsis;
 
-                    Debug.Log($"{profil.profilAdi} memnun kaldı ve {eklenecekBahsis:F2}TL bahşiş bıraktı.");
-                    
-                }
-
-            
-            }
-
-            if(KasaYoneticisi.Sistem != null)
-            {
-                KasaYoneticisi.Sistem.SiparisGeliriEkle(odenecekTutar);
+                Debug.Log($"{profil.profilAdi} kusursuz siparişe bayıldı ve {eklenecekBahsis:F2} TL bahşiş ateşledi.");
             }
         }
-        if (AdisyonUI.Sistem != null)
+        else
         {
-            AdisyonUI.Sistem.FisiTemizle();
-        }
-        if (OyunYoneticisi.Sistem != null)
-        {
-            OyunYoneticisi.Sistem.MusteriGitti();
+            // 0.4 ile 0.6 arasında rastgele bir çarpan belirliyoruz (%40 ile %60 arası)
+
+            odenecekTutar = siparisim.toplamFiyat * Random.Range(0.4f, 0.6f);
         }
 
-        if (MusteriKuyrukYoneticisi.Sistem != null)
+        if (odenecekTutar > 0f && KasaYoneticisi.Sistem != null)
         {
-            MusteriKuyrukYoneticisi.Sistem.KuyruguIlerlet();
+            KasaYoneticisi.Sistem.SiparisGeliriEkle(odenecekTutar);
         }
 
-        
-        
+        if (AdisyonUI.Sistem != null) AdisyonUI.Sistem.FisiTemizle();
+        if (OyunYoneticisi.Sistem != null) OyunYoneticisi.Sistem.MusteriGitti();
+        if (MusteriKuyrukYoneticisi.Sistem != null) MusteriKuyrukYoneticisi.Sistem.KuyruguIlerlet();
 
         Destroy(gameObject);
     }

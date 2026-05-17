@@ -13,7 +13,7 @@ public class Musteri : MonoBehaviour
     public MusteriProfiliSO profil;
 
     [Header("Görsel Bağlantıları")]
-    public SpriteRenderer karakterSprite;
+    public Image karakterGoruntusu;
 
 
     private bool siparisOnaylandiMi = false;
@@ -25,9 +25,10 @@ public class Musteri : MonoBehaviour
         maxSabir = profil.beklemeSuresi;
         kalanSabir = profil.beklemeSuresi;
 
-        if (karakterSprite != null && profil.musteriResmi != null)
+        if (karakterGoruntusu != null && profil.musteriResmi != null)
         {
-            karakterSprite.sprite = profil.musteriResmi;
+            karakterGoruntusu.sprite = profil.musteriResmi;
+            karakterGoruntusu.color = Color.white;
         }
     }
 

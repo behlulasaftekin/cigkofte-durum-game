@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 64bc86cafa7c7494688f4ba1f4d65d41
+guid: 8e3eeeff050b0174385b3065fddacfa6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3845196829904055341
-    second: ogrenci_musteri_0
+      213: 5934431596147104408
+    second: normal_musteri-removebg-preview_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ogrenci_musteri_0
+      name: normal_musteri-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
         y: 0
-        width: 784
-        height: 1600
+        width: 347
+        height: 714
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d2ca3e1e422ec5530800000000000000
-      internalID: 3845196829904055341
+      spriteID: 89ad33048165b5250800000000000000
+      internalID: 5934431596147104408
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ogrenci_musteri_0: 3845196829904055341
+      normal_musteri-removebg-preview_0: 5934431596147104408
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Zengin-Sabirsiz
   m_EditorClassIdentifier: Assembly-CSharp::MusteriProfiliSO
   profilAdi: "Zengin M\xFC\u015Fteri"
-  karakterGorseli: {fileID: 7078124417386380978, guid: 552116a11be5b674cb4a045c0bda15bd, type: 3}
+  karakterGorseli: {fileID: 996433555156312276, guid: 7904a8fc73c424842b0453982665ca08, type: 3}
   beklemeSuresi: 30
   bahsisCarpani: 2.5
   bahsisBirakmaIhtimali: 0.7
-  musteriResmi: {fileID: 7078124417386380978, guid: 552116a11be5b674cb4a045c0bda15bd, type: 3}
+  musteriResmi: {fileID: 996433555156312276, guid: 7904a8fc73c424842b0453982665ca08, type: 3}
   minMalzeme: 1
   maxMalzeme: 5
   dubleIstemeIhtimali: 0.3

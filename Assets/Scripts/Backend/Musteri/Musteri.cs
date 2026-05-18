@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.UI;// sliderı kontrol etmek için      
+using TMPro;
 
 public class Musteri : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class Musteri : MonoBehaviour
     public Image sabirFillImage; // Barın içindeki renkli kısmın resmi
     public float maxSabir; // Müşterinin toplam sabır süresi
     public float kalanSabir;
+
+    [Header("Konuşma Balonu")]
+    public GameObject konusmaBalonuObjesi;
+    public TextMeshProUGUI konusmaBalonuText;
+
     [Header("Müşteri Bilgileri")]
     public SiparisVerisi siparisim;
     public MusteriProfiliSO profil;
@@ -87,7 +93,13 @@ public class Musteri : MonoBehaviour
         siparisOnaylandiMi = true;
         Debug.Log($"Sıra {profil.profilAdi}'ne geldi. Siparişi: {siparisim.ToString()}");
 
-        if(AdisyonUI.Sistem != null)
+        if (konusmaBalonuObjesi != null && konusmaBalonuText != null)
+        {
+            konusmaBalonuObjesi.SetActive(true);
+            konusmaBalonuText.text = siparisim.ToString();
+        }
+
+        if (AdisyonUI.Sistem != null)
         {
             AdisyonUI.Sistem.FiseYaz(profil.profilAdi, siparisim.ToString());
         }

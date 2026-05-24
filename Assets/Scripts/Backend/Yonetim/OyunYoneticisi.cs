@@ -98,16 +98,16 @@ public class OyunYoneticisi : MonoBehaviour
         if (gunSonuPaneli != null)
         {
             gunSonuPaneli.SetActive(true);
-            if (gunBaslikText != null) gunBaslikText.text = $"--- {mevcutGun}. GÜN SONU ---";
-            if (kazancText != null) kazancText.text = $"Toplam Kazanç: {gunlukGelir:F2} TL";
-            if (giderText != null) giderText.text = $"Malzeme Gideri: {gunlukGider:F2} TL";
-            if (mutluMusteriText != null) mutluMusteriText.text = $"Mutlu Müşteri: {basariliSiparis}";
-            if (kacanMusteriText != null) kacanMusteriText.text = $"Kaçan Müşteri: {kacanMusteri}";
+            if (gunBaslikText != null) gunBaslikText.text = $"{mevcutGun}. GÜN SONU";
+            if (kazancText != null) kazancText.text = $"{gunlukGelir:F2}";
+            if (giderText != null) giderText.text = $"{gunlukGider:F2}";
+            if (mutluMusteriText != null) mutluMusteriText.text = $"{basariliSiparis}";
+            if (kacanMusteriText != null) kacanMusteriText.text = $"{kacanMusteri}";
 
             float netKar = gunlukGelir - gunlukGider;
             if(netKar != null)
             {
-                netKarText.text = $"Net Kar: {netKar:F2} TL";
+                netKarText.text = $"{netKar:F2}";
                 netKarText.color = netKar >= 0 ? Color.green : Color.red;
 
             }

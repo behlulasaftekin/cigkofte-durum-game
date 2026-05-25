@@ -94,7 +94,7 @@ public class OyunYoneticisi : MonoBehaviour
         if (MusteriKuyrukYoneticisi.Sistem != null)
             MusteriKuyrukYoneticisi.Sistem.dukkanAcikMi = false;
         MusteriKuyrukYoneticisi.Sistem.DukkaniBosalt();
-        HazirlikYoneticisi.Sistem.CopeAt();
+        HazirlikYoneticisi.Sistem.TezgahiSifirla();
         if (gunSonuPaneli != null)
         {
             gunSonuPaneli.SetActive(true);

@@ -63,11 +63,16 @@ public static class SiparisDogrulayici
             rapor.sonuc = DogrulamaSonucu.FazlaMalzeme;
 
         float skor = 1f;
-        skor -= rapor.eksikMalzemeler.Count * 0.15f;
-        skor -= rapor.fazlaMalzemeler.Count * 0.05f;
-        if (!rapor.dubleDogruMu) skor -= 0.3f;
-        if (!rapor.ciftLavasDogruMu) skor -= 0.2f;
+        skor -= rapor.eksikMalzemeler.Count * 0.30f; 
+        skor -= rapor.fazlaMalzemeler.Count * 0.20f; 
+        if (!rapor.dubleDogruMu) skor -= 0.40f;      
+        if (!rapor.ciftLavasDogruMu) skor -= 0.30f;  
+
         rapor.memnuniyetSkoru = Mathf.Clamp01(skor);
+        if (rapor.memnuniyetSkoru < 0.4f)
+        {
+            rapor.sonuc = DogrulamaSonucu.TamamenYanlis;
+        }   
         return rapor;
     }
 

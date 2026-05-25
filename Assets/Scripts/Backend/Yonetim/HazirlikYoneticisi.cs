@@ -57,7 +57,7 @@ public class HazirlikYoneticisi : MonoBehaviour
     }
 
    
-    private void TezgahiSifirla()
+    public void TezgahiSifirla()
     {
         tezgahtakiMalzeler.Clear();
         OnTezgahTemizlendi?.Invoke();

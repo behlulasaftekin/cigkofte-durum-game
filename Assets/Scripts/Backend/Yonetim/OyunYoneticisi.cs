@@ -22,6 +22,7 @@ public class OyunYoneticisi : MonoBehaviour
 
     [Header("UI - Gün Sonu Paneli")]
     public GameObject gunSonuPaneli;
+    public Animator gunSonuAnimator;
     public TextMeshProUGUI gunBaslikText;
     public TextMeshProUGUI kazancText;
     public TextMeshProUGUI giderText;
@@ -117,6 +118,19 @@ public class OyunYoneticisi : MonoBehaviour
         {
             Debug.Log("<color=gold>🏆 TEBRİKLER! TÜM GÜNLERİ BAŞARIYLA ATLATIP ZENGİN BİR ESNAF OLDUN!</color>");
         }
+    }
+
+    public void YeniGunButonunaBasildi()
+    {
+        if (mevcutGun >= maxGun) return;
+
+        if (gunSonuAnimator != null)
+        {
+            gunSonuAnimator.SetTrigger("YeniGunTetik"); 
+        }
+
+      
+        Invoke("YeniGuneBasla", 1f);
     }
 
     public void YeniGuneBasla()

@@ -8,7 +8,11 @@
         [Header("Ekonomi Durumu")]
         public float kasaBakiyesi = 100f;
         public TextMeshProUGUI kasaText;
-    
+        
+        [Header("Animasyonlar")]
+        public Animator kasaAnimator;
+        public TextMeshProUGUI gelirText;
+            
         private void Awake()
         {
             if(Sistem != null && Sistem != this) { Destroy(gameObject); return; }
@@ -44,8 +48,18 @@
                 OyunYoneticisi.Sistem.gunlukGelir += kazanilanPara;
                 OyunYoneticisi.Sistem.basariliSiparis++;
             }
+          
+            if (gelirText != null)
+            {
+            gelirText.text = "+" + kazanilanPara.ToString("F2") + " TL";
+            }
 
             ArayuzuGuncelle();
+
+            if (kasaAnimator != null)
+            {
+                kasaAnimator.SetTrigger("ParaGeldi");
+            }
 
             Debug.Log($"[+] Kasaya {kazanilanPara} TL girdi. Güncel Kasa: {kasaBakiyesi}");
         }

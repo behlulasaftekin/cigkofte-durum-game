@@ -6,7 +6,6 @@ public class KasaEkraniUI : MonoBehaviour
     public TextMeshProUGUI kasaYazisi;
 
     [Header("Ayarlar")]
-    public string onEk = "Kasa: ";
     public string birim = " TL";
 
     void Update()
@@ -15,7 +14,7 @@ public class KasaEkraniUI : MonoBehaviour
         {
             float bakiye = KasaYoneticisi.Sistem.kasaBakiyesi;
 
-            kasaYazisi.text = onEk + bakiye.ToString("F2") + birim;
+            kasaYazisi.text = bakiye.ToString("F2") + birim;
 
         }
     }

@@ -43,7 +43,7 @@ public class DukkanYonetici : MonoBehaviour
     {
         toplamPara += miktar;
 
-        kasaEkrani.text = "Kasa: " + toplamPara + "TL";
+        kasaEkrani.text =toplamPara + "TL";
         Debug.Log("Kasaya para girdi/çıktı: " + miktar + "TL. Güncel Kasa: "+  toplamPara + "TL");
     }
 }

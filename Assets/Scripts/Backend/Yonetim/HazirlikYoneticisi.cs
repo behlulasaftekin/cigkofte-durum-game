@@ -53,7 +53,7 @@ public class HazirlikYoneticisi : MonoBehaviour
         OnMalzemeEklendi?.Invoke(malzeme);
         Debug.Log($"Tezgaha Eklendi: {malzeme.ekrandaGozukenAd}");
         GuncelDurumuYazdir();
-
+        SesYoneticisi.Sistem.MalzemeSesiniCal();
     }
 
    

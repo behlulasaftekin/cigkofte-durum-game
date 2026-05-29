@@ -62,7 +62,8 @@
             }
 
             Debug.Log($"[+] Kasaya {kazanilanPara} TL girdi. Güncel Kasa: {kasaBakiyesi}");
-        }
+        SesYoneticisi.Sistem.KasaSesiniCal();
+    }
         private void ArayuzuGuncelle()
         {
             if (kasaText != null)

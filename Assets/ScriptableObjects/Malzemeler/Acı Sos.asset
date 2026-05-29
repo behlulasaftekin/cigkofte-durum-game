@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Ac\u0131 Sos"
   m_EditorClassIdentifier: Assembly-CSharp::MalzemeSO
   sistemAdi: aci_sos
-  ekrandaGozukenAd: "Ac\u0131 sos"
+  ekrandaGozukenAd: "Ac\u0131 Sos"
   ikon: {fileID: 0}
   fiyat: 0
   maliyet: 0.5

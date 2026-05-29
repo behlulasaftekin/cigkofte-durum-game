@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: b68aec452a326384f810b982761a50da
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4029961744853409373
+    second: "m\u0131s\u0131rGorsel 1_0"
+  - first:
+      213: 5378897101915686482
+    second: "m\u0131s\u0131rGorsel 1_1"
+  - first:
+      213: -817553128996112832
+    second: "m\u0131s\u0131rGorsel 1_2"
+  - first:
+      213: -1385933341540563674
+    second: "m\u0131s\u0131rGorsel 1_3"
+  - first:
+      213: 4151717075128424647
+    second: "m\u0131s\u0131rGorsel 1_4"
+  - first:
+      213: -9009527059108277604
+    second: "m\u0131s\u0131rGorsel 1_5"
+  - first:
+      213: 5048258771223437355
+    second: "m\u0131s\u0131rGorsel 1_6"
+  - first:
+      213: 5464882853132315982
+    second: "m\u0131s\u0131rGorsel 1_7"
+  - first:
+      213: -3233554334984534075
+    second: "m\u0131s\u0131rGorsel 1_8"
+  - first:
+      213: 454025595933012876
+    second: "m\u0131s\u0131rGorsel 1_9"
+  - first:
+      213: -2628672637843905227
+    second: "m\u0131s\u0131rGorsel 1_10"
+  - first:
+      213: -2158600312089793536
+    second: "m\u0131s\u0131rGorsel 1_11"
+  - first:
+      213: -4607437394454357949
+    second: "m\u0131s\u0131rGorsel 1_12"
+  - first:
+      213: -743292674702110181
+    second: "m\u0131s\u0131rGorsel 1_13"
+  - first:
+      213: 274685081103749934
+    second: "m\u0131s\u0131rGorsel 1_14"
+  - first:
+      213: -5483861407771942110
+    second: "m\u0131s\u0131rGorsel 1_15"
+  - first:
+      213: -6888734863912513603
+    second: "m\u0131s\u0131rGorsel 1_16"
+  - first:
+      213: 2588730869048971227
+    second: "m\u0131s\u0131rGorsel 1_17"
+  - first:
+      213: -8956155132713094880
+    second: "m\u0131s\u0131rGorsel 1_18"
+  - first:
+      213: 7741083969093040912
+    second: "m\u0131s\u0131rGorsel 1_19"
+  - first:
+      213: 8955463093773590797
+    second: "m\u0131s\u0131rGorsel 1_20"
+  - first:
+      213: -5825074626909490563
+    second: "m\u0131s\u0131rGorsel 1_21"
+  - first:
+      213: -5746897420735532652
+    second: "m\u0131s\u0131rGorsel 1_22"
+  - first:
+      213: -109994863137631139
+    second: "m\u0131s\u0131rGorsel 1_23"
+  - first:
+      213: 104790585241107399
+    second: "m\u0131s\u0131rGorsel 1_24"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_0"
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 261
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e9664fadc4de730800000000000000
+      internalID: 4029961744853409373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_1"
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 268
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25600136a6ea5aa40800000000000000
+      internalID: 5378897101915686482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_2"
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 231
+        width: 83
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0467d21c2c777a4f0800000000000000
+      internalID: -817553128996112832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_3"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 268
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625ca1708fc24cce0800000000000000
+      internalID: -1385933341540563674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_4"
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 275
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c814fedeacdd9930800000000000000
+      internalID: 4151717075128424647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_5"
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 250
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c92d49fcfdab7f280800000000000000
+      internalID: -9009527059108277604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_6"
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 108
+        width: 93
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b20e5090b940f0640800000000000000
+      internalID: 5048258771223437355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_7"
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 230
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4d2310300a27db40800000000000000
+      internalID: 5464882853132315982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_8"
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 252
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c78255e67b1023d0800000000000000
+      internalID: -3233554334984534075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_9"
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 233
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c83b58cbfd50d4600800000000000000
+      internalID: 454025595933012876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_10"
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 233
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5356686c924158bd0800000000000000
+      internalID: -2628672637843905227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_11"
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 119
+        width: 131
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00c27d1f37c1b02e0800000000000000
+      internalID: -2158600312089793536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_12"
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 228
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34852bad9181f00c0800000000000000
+      internalID: -4607437394454357949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_13"
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 199
+        width: 65
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b121b30204b4fa5f0800000000000000
+      internalID: -743292674702110181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_14"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 125
+        width: 161
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e23d94c30a0efc300800000000000000
+      internalID: 274685081103749934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_15"
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 209
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223a748ba1965e3b0800000000000000
+      internalID: -5483861407771942110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_16"
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 175
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf45aca32c4660a0800000000000000
+      internalID: -6888734863912513603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_17"
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 166
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf80cc72050de320800000000000000
+      internalID: 2588730869048971227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_18"
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 187
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0213859cb5855b380800000000000000
+      internalID: -8956155132713094880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_19"
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 97
+        width: 59
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01bf24a1bdadd6b60800000000000000
+      internalID: 7741083969093040912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_20"
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 71
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01ee775c32384c70800000000000000
+      internalID: 8955463093773590797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_21"
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 133
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d723be84d7d292fa0800000000000000
+      internalID: -5825074626909490563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_22"
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 70
+        width: 71
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49133748e3bee30b0800000000000000
+      internalID: -5746897420735532652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_23"
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 54
+        width: 50
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5450973148397ef0800000000000000
+      internalID: -109994863137631139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\u0131s\u0131rGorsel 1_24"
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 52
+        width: 55
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cbf9196b7a447100800000000000000
+      internalID: 104790585241107399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "m\u0131s\u0131rGorsel 1_0": 4029961744853409373
+      "m\u0131s\u0131rGorsel 1_1": 5378897101915686482
+      "m\u0131s\u0131rGorsel 1_10": -2628672637843905227
+      "m\u0131s\u0131rGorsel 1_11": -2158600312089793536
+      "m\u0131s\u0131rGorsel 1_12": -4607437394454357949
+      "m\u0131s\u0131rGorsel 1_13": -743292674702110181
+      "m\u0131s\u0131rGorsel 1_14": 274685081103749934
+      "m\u0131s\u0131rGorsel 1_15": -5483861407771942110
+      "m\u0131s\u0131rGorsel 1_16": -6888734863912513603
+      "m\u0131s\u0131rGorsel 1_17": 2588730869048971227
+      "m\u0131s\u0131rGorsel 1_18": -8956155132713094880
+      "m\u0131s\u0131rGorsel 1_19": 7741083969093040912
+      "m\u0131s\u0131rGorsel 1_2": -817553128996112832
+      "m\u0131s\u0131rGorsel 1_20": 8955463093773590797
+      "m\u0131s\u0131rGorsel 1_21": -5825074626909490563
+      "m\u0131s\u0131rGorsel 1_22": -5746897420735532652
+      "m\u0131s\u0131rGorsel 1_23": -109994863137631139
+      "m\u0131s\u0131rGorsel 1_24": 104790585241107399
+      "m\u0131s\u0131rGorsel 1_3": -1385933341540563674
+      "m\u0131s\u0131rGorsel 1_4": 4151717075128424647
+      "m\u0131s\u0131rGorsel 1_5": -9009527059108277604
+      "m\u0131s\u0131rGorsel 1_6": 5048258771223437355
+      "m\u0131s\u0131rGorsel 1_7": 5464882853132315982
+      "m\u0131s\u0131rGorsel 1_8": -3233554334984534075
+      "m\u0131s\u0131rGorsel 1_9": 454025595933012876
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

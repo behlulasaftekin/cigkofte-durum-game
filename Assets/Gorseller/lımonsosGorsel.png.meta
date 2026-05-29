@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 0400457d9046d854e9ea786344ac27e7
+guid: 6cb56287cecfd114b8dcc62a1f97de56
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9150355771522965076
-    second: DoritosGorsel_0
-  - first:
-      213: -4122782209454347260
-    second: DoritosGorsel_1
-  - first:
-      213: 3710734544026773258
-    second: DoritosGorsel_2
+      213: -8601349762845794049
+    second: "l\u0131monsosGorsel_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -132,57 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DoritosGorsel_0
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 221
-        width: 12
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ca1aded08e7630180800000000000000
-      internalID: -9150355771522965076
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoritosGorsel_1
-      rect:
-        serializedVersion: 2
-        x: 103
-        y: 37
-        width: 486
-        height: 309
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 40c6c278c6fe8c6c0800000000000000
-      internalID: -4122782209454347260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoritosGorsel_2
+      name: "l\u0131monsosGorsel_0"
       rect:
         serializedVersion: 2
         x: 95
-        y: 182
-        width: 11
-        height: 16
+        y: 43
+        width: 479
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a07ac70586d2f7330800000000000000
-      internalID: 3710734544026773258
+      spriteID: ff0afac66fdd1a880800000000000000
+      internalID: -8601349762845794049
       vertices: []
       indices: 
       edges: []
@@ -211,9 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DoritosGorsel_0: -9150355771522965076
-      DoritosGorsel_1: -4122782209454347260
-      DoritosGorsel_2: 3710734544026773258
+      "l\u0131monsosGorsel_0": -8601349762845794049
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

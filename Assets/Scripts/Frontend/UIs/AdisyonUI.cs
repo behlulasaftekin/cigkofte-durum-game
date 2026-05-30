@@ -20,10 +20,7 @@ public class AdisyonUI : MonoBehaviour
             return;
         }
         Sistem = this;
-    }
 
-    private void Start()
-    {
         FisiTemizle();
     }
 
@@ -32,7 +29,6 @@ public class AdisyonUI : MonoBehaviour
     {
         if (adisyonYazisi != null)
         {
-            //
             adisyonYazisi.text =
                 $"<color={yaziRenkKodu}>" +
                 $"<b>MÜŞTERİ:</b>\n" +

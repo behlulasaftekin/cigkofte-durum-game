@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b9653b36d5cd9c849adc5fb0a401cebe
+guid: 0a918aeba8f4513468173615fdba4053
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 97492146601714156
-    second: Tezgahgorsel_0
+      213: -4985756821790585042
+    second: GirisPanelGorsel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tezgahgorsel_0
+      name: GirisPanelGorsel_0
       rect:
         serializedVersion: 2
-        x: 36
-        y: 119
-        width: 447
-        height: 198
+        x: 153
+        y: 30
+        width: 390
+        height: 306
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce1e59e379c5a5100800000000000000
-      internalID: 97492146601714156
+      spriteID: e2f01b416980fcab0800000000000000
+      internalID: -4985756821790585042
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tezgahgorsel_0: 97492146601714156
+      GirisPanelGorsel_0: -4985756821790585042
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

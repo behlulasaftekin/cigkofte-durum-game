@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d6351b592e72db74f890730eebd4a63d
+guid: 5e58fa6a2818f554fbe78913e2d74919
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8702410651050498585
-    second: Temizle Gorsel_0
+      213: 9127224990775802702
+    second: teslimet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Temizle Gorsel_0
+      name: teslimet_0
       rect:
         serializedVersion: 2
-        x: 88
-        y: 89
-        width: 515
-        height: 189
+        x: 125
+        y: 91
+        width: 429
+        height: 199
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e52f86ce93da3780800000000000000
-      internalID: -8702410651050498585
+      spriteID: e4b724065ca6aae70800000000000000
+      internalID: 9127224990775802702
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Temizle Gorsel_0: -8702410651050498585
+      teslimet_0: 9127224990775802702
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

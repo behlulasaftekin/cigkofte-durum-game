@@ -96,12 +96,12 @@ public class Musteri : MonoBehaviour
         if (konusmaBalonuObjesi != null && konusmaBalonuText != null)
         {
             konusmaBalonuObjesi.SetActive(true);
-            konusmaBalonuText.text = siparisim.ToString();
+            konusmaBalonuText.text = siparisim.MusteriKonusmaFormati();
         }
 
         if (AdisyonUI.Sistem != null)
         {
-            AdisyonUI.Sistem.FiseYaz(profil.profilAdi, siparisim.ToString());
+            AdisyonUI.Sistem.FiseYaz(profil.profilAdi, siparisim.AdisyonFisiFormati());
         }
     }
 

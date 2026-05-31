@@ -30,23 +30,38 @@ public class SiparisVerisi
         return toplam;
     }
 
-    public override string ToString()
+    public string AdisyonFisiFormati()
     {
         List<string> isimler = new List<string>();
-        foreach(var m in istenenMalzemeler)
+        foreach (var m in istenenMalzemeler)
         {
             if (m.ekrandaGozukenAd != "Lavaş" && m.ekrandaGozukenAd != "Çiğköfte")
-            {
                 isimler.Add(m.ekrandaGozukenAd);
-            }
         }
-
         string malzemeIsimleri = string.Join(", ", isimler);
         string porsiyon = dubleMi ? "DUBLE" : "NORMAL";
         string lavasDurumu = ciftLavasMi ? "ÇİFT LAVAŞ" : "TEK LAVAŞ";
+
         if (isimler.Count > 0)
-            return $"[{porsiyon}] [{lavasDurumu}] {malzemeIsimleri} - Toplam: {toplamFiyat} TL";
+            return $"<b>PORSİYON:</b> {porsiyon}\n<b>LAVAŞ:</b> {lavasDurumu}\n<b>İÇİNDEKİLER:</b>\n{malzemeIsimleri}\n-----------------\n<b>TOPLAM: {toplamFiyat} TL</b>";
         else
-            return $"[{porsiyon}] [{lavasDurumu}] - Toplam: {toplamFiyat} TL";
+            return $"<b>PORSİYON:</b> {porsiyon}\n<b>LAVAŞ:</b> {lavasDurumu}\n<b>İÇİNDEKİLER:</b>\n(Sade)\n-----------------\n<b>TOPLAM: {toplamFiyat} TL</b>";
+    }
+    public string MusteriKonusmaFormati()
+    {
+        List<string> isimler = new List<string>();
+        foreach (var m in istenenMalzemeler)
+        {
+            if (m.ekrandaGozukenAd != "Lavaş" && m.ekrandaGozukenAd != "Çiğköfte")
+                isimler.Add(m.ekrandaGozukenAd);
+        }
+        string malzemeIsimleri = string.Join(", ", isimler);
+        string porsiyon = dubleMi ? "Duble" : "Normal";
+        string lavasDurumu = ciftLavasMi ? "çift lavaş" : "tek lavaş";
+
+        if (isimler.Count > 0)
+            return $"Ustam bana bi {porsiyon} dürüm sar, {lavasDurumu} olsun. İçine de {malzemeIsimleri} koy sana zahmet.";
+        else
+            return $"Ustam bana bi {porsiyon} dürüm sar, {lavasDurumu} olsun. Yeşillik falan istemiyorum, sade olsun.";
     }
 }

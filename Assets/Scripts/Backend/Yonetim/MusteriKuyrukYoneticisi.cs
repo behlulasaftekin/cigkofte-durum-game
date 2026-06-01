@@ -28,8 +28,7 @@ public class MusteriKuyrukYoneticisi : MonoBehaviour
             return;
         }
         Sistem = this;
-
-    }   
+    }
 
     private void Update()
     {
@@ -61,21 +60,22 @@ public class MusteriKuyrukYoneticisi : MonoBehaviour
         {
             kuyruk[0].SiparisTeslimAl(mutfaktanGelenDurum);
         }
-
         else
             Debug.LogWarning("Dükkanda müşteri yok mutfaktan dürüm çıktı, Çöpe gitti.");
     }
 
-    
     private void MusteriCagir()
     {
         if (profilHavuzu.Count == 0) return;
-      
 
         int siraIndex = kuyruk.Count;
         Transform hedefNokta = siraNoktalari[siraIndex];
 
         GameObject yeniObj = Instantiate(musteriPrefab, hedefNokta);
+
+        
+        yeniObj.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+
         Musteri yeniMusteri = yeniObj.GetComponent<Musteri>();
 
         int rasgteleProfilIndex = Random.Range(0, profilHavuzu.Count);
@@ -84,12 +84,12 @@ public class MusteriKuyrukYoneticisi : MonoBehaviour
         kuyruk.Add(yeniMusteri);
         Debug.Log($"Kapıdan {siraIndex + 1}. müşteri girdi. Tipi: {yeniMusteri.profil.profilAdi}");
 
-        if(kuyruk.Count == 1)
+        if (kuyruk.Count == 1)
         {
             yeniMusteri.KasayaSiraGeldi();
         }
     }
-        
+
     public void KuyruguIlerlet()
     {
         if (kuyruk.Count > 0)
@@ -98,23 +98,22 @@ public class MusteriKuyrukYoneticisi : MonoBehaviour
 
             for (int i = 0; i < kuyruk.Count; i++)
             {
-                kuyruk[i].transform.position = siraNoktalari[i].position;
-
+                
+                kuyruk[i].transform.SetParent(siraNoktalari[i]);
+                kuyruk[i].GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
             }
             Debug.Log("Kuyruk bir kişi ilerledi.");
         }
 
-        if(kuyruk.Count > 0)
+        if (kuyruk.Count > 0)
         {
             kuyruk[0].KasayaSiraGeldi();
         }
-
-
     }
 
     public void DukkaniBosalt()
     {
-        foreach(var musteri in kuyruk)
+        foreach (var musteri in kuyruk)
         {
             if (musteri != null) Destroy(musteri.gameObject);
         }

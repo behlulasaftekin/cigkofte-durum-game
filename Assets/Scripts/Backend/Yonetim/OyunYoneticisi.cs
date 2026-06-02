@@ -106,7 +106,7 @@ public class OyunYoneticisi : MonoBehaviour
             if (kacanMusteriText != null) kacanMusteriText.text = $"{kacanMusteri}";
 
             float netKar = gunlukGelir - gunlukGider;
-            if(netKar != null)
+            if(netKarText != null)
             {
                 netKarText.text = $"{netKar:F2}";
                 netKarText.color = netKar >= 0 ? Color.green : Color.red;
@@ -118,6 +118,12 @@ public class OyunYoneticisi : MonoBehaviour
         {
             Debug.Log("<color=gold>🏆 TEBRİKLER! TÜM GÜNLERİ BAŞARIYLA ATLATIP ZENGİN BİR ESNAF OLDUN!</color>");
         }
+    }
+
+    public void SiparisBasarili()
+    {
+        
+        MusteriGitti();
     }
 
     public void YeniGunButonunaBasildi()

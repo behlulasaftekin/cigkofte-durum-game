@@ -91,7 +91,7 @@ public class Musteri : MonoBehaviour
         if (AdisyonUI.Sistem != null) AdisyonUI.Sistem.FisiTemizle();
         if (OyunYoneticisi.Sistem != null)
         {
-            OyunYoneticisi.Sistem.kacanMusteri++;
+            
             OyunYoneticisi.Sistem.MusteriKacti();
         }
         if (MusteriKuyrukYoneticisi.Sistem != null) MusteriKuyrukYoneticisi.Sistem.KuyruguIlerlet();
@@ -132,7 +132,21 @@ public class Musteri : MonoBehaviour
         }
 
         if (AdisyonUI.Sistem != null) AdisyonUI.Sistem.FisiTemizle();
-        if (OyunYoneticisi.Sistem != null) OyunYoneticisi.Sistem.MusteriGitti();
+
+        
+        if (OyunYoneticisi.Sistem != null)
+        {
+            if (rapor.sonuc == SiparisDogrulayici.DogrulamaSonucu.TamamenYanlis)
+            {
+                OyunYoneticisi.Sistem.MusteriKacti(); 
+            }
+            else
+            {
+                OyunYoneticisi.Sistem.SiparisBasarili(); 
+            }
+        }
+       
+
         if (MusteriKuyrukYoneticisi.Sistem != null) MusteriKuyrukYoneticisi.Sistem.KuyruguIlerlet();
 
         Destroy(gameObject);
@@ -171,8 +185,7 @@ public class Musteri : MonoBehaviour
         if (AdisyonUI.Sistem != null) AdisyonUI.Sistem.FisiTemizle();
         if (OyunYoneticisi.Sistem != null)
         {
-            OyunYoneticisi.Sistem.kacanMusteri++;
-            OyunYoneticisi.Sistem.MusteriGitti();
+            OyunYoneticisi.Sistem.MusteriKacti();
         }
         if (MusteriKuyrukYoneticisi.Sistem != null) MusteriKuyrukYoneticisi.Sistem.KuyruguIlerlet();
 
